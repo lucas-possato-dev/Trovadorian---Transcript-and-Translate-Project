@@ -1,5 +1,5 @@
 const FileDisplay = (props) => {
-  const { handleAudioReset, file, audioStream } = props;
+  const { handleAudioReset, file, audioStream, handleFormSubmission } = props;
   return (
     <main className="flex-1 p-4 flex flex-col gap-3 text-center sm:w-96 sm:gap-4 pb-20 justify-center w-72 max-w-full mx-auto">
       <h1 className="font-semibold text-4xl sm:text-5xl ">
@@ -17,7 +17,10 @@ const FileDisplay = (props) => {
         >
           Reset
         </button>
-        <button className="specialBtn px-3 p-2 rounded-lg text-blue-400 flex items-center gap-2 font-medium">
+        <button
+          onClick={handleFormSubmission}
+          className="specialBtn px-3 p-2 rounded-lg text-blue-400 flex items-center gap-2 font-medium"
+        >
           <p>Transcribe</p>
           <i className="fa-solid fa-pen-nib"></i>
         </button>
