@@ -24,18 +24,14 @@ const Information = (props) => {
     const onMessageReceived = async (e) => {
       switch (e.data.status) {
         case "initiate":
-          console.log("DOWNLOADING");
           break;
         case "progress":
-          console.log("LOADING");
           break;
         case "update":
           setTranslation(e.data.output);
-          console.log(e.data.output);
           break;
         case "complete":
           setTranslating(false);
-          console.log("DONE");
           break;
       }
     };
